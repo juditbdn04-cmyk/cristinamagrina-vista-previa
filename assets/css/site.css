@@ -144,6 +144,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
 
 .section-head { max-width: 42rem; margin-bottom: clamp(1.5rem, 2.6vw, 2.1rem); }
 .section-head--center { margin-inline: auto; text-align: center; }
+.section-head--center h1, .section-head--center h2, .section-head--center h3, .section-head--center h4 { text-align: center; }
 .section-head p { color: var(--ink-soft); font-size: var(--step-1); line-height: 1.4; }
 
 .eyebrow {
@@ -387,8 +388,8 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
 .card__media { overflow: hidden; aspect-ratio: 4 / 3; background: var(--cream-deep); }
 .card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
 .card:hover .card__media img { transform: scale(1.05); }
-.card__body { padding: clamp(1.3rem, 2.4vw, 1.8rem); display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; }
-.card__body h2, .card__body h3 { font-size: var(--step-1); margin-bottom: .45rem; }
+.card__body { padding: clamp(1.3rem, 2.4vw, 1.8rem); display: flex; flex-direction: column; align-items: center; text-align: justify; flex: 1; }
+.card__body h2, .card__body h3 { font-size: var(--step-1); margin-bottom: .45rem; text-align: center; }
 .card__body p { color: var(--ink-soft); font-size: .95rem; margin-bottom: .95rem; }
 .card__body .link-arrow { margin-top: auto; }
 .card__tag {
@@ -502,7 +503,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
   text-align: center; position: relative; overflow: hidden;
 }
 .cta > * { position: relative; }
-.cta h2 { color: var(--ink); max-width: 22ch; margin-inline: auto; }
+.cta h2 { color: var(--ink); max-width: 22ch; margin-inline: auto; text-align: center; }
 .cta p { color: var(--ink); max-width: 46ch; margin-inline: auto; margin-bottom: 1.35rem; font-size: var(--step-1); line-height: 1.4; }
 .cta__actions { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; }
 /* Sobre el verde claro solo la tinta llega al 4.5:1; el matiz se marca con el
@@ -513,12 +514,12 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
 /* ------------------------------------------------------------ 12. Stats/meta */
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 1.5rem; }
 .stat {
-  display: flex; flex-direction: column; align-items: center; text-align: center;
+  display: flex; flex-direction: column; align-items: center; text-align: justify;
   border-left: none; border-top: 2px solid var(--terracotta-soft);
   padding-left: 0; padding-top: 1.15rem;
 }
 .stat dt { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; margin-bottom: .35rem; }
-.stat dd { margin: 0; font-family: var(--font-display); font-size: var(--step-1); color: var(--ink); line-height: 1.3; text-align: center; }
+.stat dd { margin: 0; font-family: var(--font-display); font-size: var(--step-1); color: var(--ink); line-height: 1.3; text-align: justify; }
 
 /* Pill row */
 .pills { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin: 0; padding: 0; }
@@ -721,7 +722,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
 }
 .bk__close:hover { background: var(--cream-deep); color: var(--ink); }
 
-.bk__title { font-size: var(--step-2); margin-bottom: .5rem; }
+.bk__title { font-size: var(--step-2); margin-bottom: .5rem; text-align: center; }
 .bk__mail {
   font-family: var(--font-display); font-size: var(--step-1);
   margin-bottom: 1.35rem; word-break: break-word;
