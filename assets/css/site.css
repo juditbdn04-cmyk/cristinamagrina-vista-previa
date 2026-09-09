@@ -76,6 +76,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 img, svg, video { max-width: 100%; height: auto; display: block; }
@@ -87,8 +90,8 @@ h1, h2, h3, h4 {
   letter-spacing: -.015em;
   color: var(--ink);
   margin: 0 0 .42em;
-  font-variation-settings: "SOFT" 20, "WONK" 0;
   text-wrap: balance;
+  text-align: left;
 }
 h1 { font-size: var(--step-5); }
 h2 { font-size: var(--step-4); }
@@ -327,6 +330,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
 .hero__lead {
   color: rgba(255,255,255,.9); font-size: var(--step-1);
   max-width: 34rem; margin-bottom: 1.5rem; line-height: 1.4;
+  text-align: left;
 }
 .hero__actions { display: flex; flex-wrap: wrap; gap: .8rem; }
 /* El CTA principal lleva una etiqueta larga: en pantallas estrechas tiene que
@@ -336,7 +340,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
 }
 /* Page hero (interior pages) */
 .page-hero { padding-block: clamp(2.25rem, 4.5vw, 3.5rem) clamp(1.5rem, 2.5vw, 2rem); background: var(--cream-deep); }
-.page-hero__lead { font-size: var(--step-1); color: var(--ink-soft); max-width: 44rem; line-height: 1.4; }
+.page-hero__lead { font-size: var(--step-1); color: var(--ink-soft); max-width: 44rem; line-height: 1.4; text-align: left; }
 .page-hero h1 { max-width: 20ch; }
 
 .breadcrumb { font-size: .82rem; color: var(--ink-faint); margin-bottom: .85rem; }
@@ -514,7 +518,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
   padding-left: 0; padding-top: 1.15rem;
 }
 .stat dt { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; margin-bottom: .35rem; }
-.stat dd { margin: 0; font-family: var(--font-display); font-size: var(--step-1); color: var(--ink); line-height: 1.3; }
+.stat dd { margin: 0; font-family: var(--font-display); font-size: var(--step-1); color: var(--ink); line-height: 1.3; text-align: center; }
 
 /* Pill row */
 .pills { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin: 0; padding: 0; }
@@ -591,7 +595,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
 .mt-2 { margin-top: 2rem; }
 .mt-3 { margin-top: 2rem; }
 .mb-2 { margin-bottom: 2rem; }
-.lead { font-size: var(--step-1); color: var(--ink-soft); line-height: 1.4; }
+.lead { font-size: var(--step-1); color: var(--ink-soft); line-height: 1.4; text-align: left; }
 .muted { color: var(--ink-soft); }
 .small { font-size: var(--step--1); }
 .stack > * + * { margin-top: 1rem; }
