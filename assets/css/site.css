@@ -346,7 +346,16 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
 /* Page hero (interior pages) */
 .page-hero { padding-block: clamp(2.25rem, 4.5vw, 3.5rem) clamp(1.5rem, 2.5vw, 2rem); background: var(--cream-deep); }
 .page-hero__lead { font-size: var(--step-1); color: var(--ink-soft); max-width: 44rem; line-height: 1.4; text-align: left; }
+.page-hero__lead--wide { max-width: none; }
 .page-hero h1 { max-width: 20ch; }
+
+/* Long service-page titles (Adults/Parents/Adolescents/Children): fit on one
+   line on desktop instead of wrapping; on narrow screens, wrap naturally
+   at the normal size rather than forcing a cramped single line. */
+.hero-title--fit { max-width: none; }
+@media (min-width: 900px) {
+  .hero-title--fit { white-space: nowrap; font-size: calc(var(--step-5) * .85); }
+}
 
 .breadcrumb { font-size: .82rem; color: var(--ink-faint); margin-bottom: .85rem; }
 .breadcrumb a { color: var(--ink-soft); text-decoration: none; }
@@ -453,6 +462,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
   display: block;
   columns: 2;
   column-gap: 2.5rem;
+  text-align: left;
 }
 .checklist--2 li { break-inside: avoid; -webkit-column-break-inside: avoid; margin-bottom: .5rem; }
 @media (max-width: 640px) { .checklist--2 { columns: 1; } }
@@ -498,7 +508,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
   transition: transform .3s var(--ease);
 }
 .accordion details[open] summary::after { transform: rotate(135deg); }
-.accordion__body { padding-bottom: 1.1rem; max-width: 68ch; color: var(--ink-soft); }
+.accordion__body { padding-bottom: 1.1rem; color: var(--ink-soft); }
 .accordion__body p { font-size: .98rem; }
 
 /* ------------------------------------------------------------- 11. CTA band */
@@ -600,6 +610,8 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.25rem 0; }
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
 .mt-3 { margin-top: 2rem; }
+.mb-0-5 { margin-bottom: .5rem; }
+.mb-1 { margin-bottom: 1rem; }
 .mb-2 { margin-bottom: 2rem; }
 .lead { font-size: var(--step-1); color: var(--ink-soft); line-height: 1.4; text-align: left; }
 .muted { color: var(--ink-soft); }
